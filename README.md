@@ -1,6 +1,6 @@
 # fluttertodo
 
-Flutter todo webapp
+A new Flutter project.
 
 ## Getting Started
 
