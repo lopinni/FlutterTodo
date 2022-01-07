@@ -14,14 +14,14 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-  TextEditingController tec = TextEditingController();
-  final ffi = FirebaseFirestore.instance;
-
   @override
   void initState(){
     setState((){});
     super.initState();
   }
+
+  TextEditingController tec = TextEditingController();
+  final ffi = FirebaseFirestore.instance;
 
   Widget taskList(){
     return StreamBuilder<QuerySnapshot>(

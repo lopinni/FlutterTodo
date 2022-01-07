@@ -23,7 +23,8 @@ class _TaskTileState extends State<TaskTile> {
         children: [
           GestureDetector(
             onTap: (){
-              FirebaseFirestore.instance.collection("tasks")
+              FirebaseFirestore
+                  .instance.collection("tasks")
                   .doc(widget.taskID).update({"done" : !widget.completed});
             },
             child: Container(
@@ -34,7 +35,7 @@ class _TaskTileState extends State<TaskTile> {
                     borderRadius: BorderRadius.circular(24)
                 ),
                 child: widget.completed ?
-                const Icon(Icons.check, color: Colors.green,) : Container()
+                  const Icon(Icons.check, color: Colors.green,) : Container()
             ),
           ),
           const SizedBox(width: 8,),
@@ -42,7 +43,7 @@ class _TaskTileState extends State<TaskTile> {
             widget.task,
             style: TextStyle(
                 color: widget.completed ?
-                Colors.black : Colors.black.withOpacity(0.7),
+                  Colors.black : Colors.black.withOpacity(0.7),
                 fontSize: 17,
                 decoration: widget.completed ?
                 TextDecoration.lineThrough : TextDecoration.none
